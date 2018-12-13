@@ -1,9 +1,9 @@
-
+import getData from '../data/getData'
 
 export default function(taxableIncome, country='US', year=2018, jurisdiction='federal', 
     filingStatus="single") {
     
-    const getData = require('../data/getData.js');
+    //const getData = require('../data/getData.js');
     const dataObject = getData(country,year,jurisdiction);
     
     const taxBracket = dataObject.taxes.income.rate[filingStatus];
